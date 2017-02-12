@@ -12,8 +12,9 @@ autoreconf --install --verbose
 ./configure --with-vpnc-script=/usr/share/vpnc-scripts/vpnc-script --without-openssl-version-check
 make
 sudo make install
-sudo ldconfig /usr/local/lib #to include built library
 cd ..
 rm -rf openconnect
+
+sudo ldconfig /usr/local/lib #to include built library
 
 echo "you may now use: 'sudo openconnect --juniper utswra.swmed.edu' to connect"
